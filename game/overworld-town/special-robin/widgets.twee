@@ -4,27 +4,27 @@
 	<<npc Robin>><<person1>>
 	<<if $robineventnote is 1>>
 		<<set $robineventnote to 0>>
-		<i>As long as Robin has to pay Bailey, <<hes>> going to keep getting hurt and ending up like this. Maybe you should speak to Bailey about it.</i>
+		<i>로빈이 베일리에게 돈을 지불해야 하는 한, <<hesPost "은">> 계속해서 상처를 받고 이렇게 될 것이다. 아마도 당신은 그것에 대해서 베일리와 이야기를 해야 할 것이다.</i>
 		<br><br>
 	<</if>>
 	<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 95>>
-		You knock on the door. There's a pause for a moment, then Robin opens it. <<He>> stares right through you, <<his>> eyes glazed.
+		당신은 문을 두드린다. 잠깐의 정적 후에, 로빈이 문을 열어준다. <<HePost "은">> <<hisPost "의">> 생기 없는 눈으로, 당신을 똑바로 응시한다.
 		<br><br>
-		<<He>> doesn't stop you entering and sitting on the bed. "Come sit with me," you say.
+		<<HePost "은">> 당신이 들어가 침대에 앉는 것을 막지 않는다. "이리 와서 같이 앉자."라고 당신은 말한다.
 		<br><br>
-		<<He>> sits beside you.
+		<<HePost "은">> 당신의 곁에 앉는다.
 		<br><br>
-		<<link [[Hug (0:30)|Robin Trauma Hug]]>><<npcincr Robin love 1>><<npcincr Robin dom -1>><<npcincr Robin trauma -6>><<pass 30>><</link>><<glove>><<ldom>>
+		<<link [[껴안는다 (0:30)|Robin Trauma Hug]]>><<npcincr Robin love 1>><<npcincr Robin dom -1>><<npcincr Robin trauma -6>><<pass 30>><</link>><<glove>><<ldom>>
 		<br><br>
 	<<elseif $robin_injured gte 1>>
-		You knock on the door. Robin opens it and smiles. <<His>> eyes are red. "Hey," <<he>> says. "Come in." You enter and sit on the bed. <<He>> sits beside you.
+		당신은 문을 두드린다. 로빈은 문을 열고 미소짓는다. <<HisPost "의">> 눈이 빨갛다. "어이," <<hePost "이">> 말한다. "들어와." 당신은 들어가 침대에 앉는다. <<HePost "이">> 당신의 곁에 앉는다.
 		<<His>> movements are awkward, as if <<hes>> in pain.
 		<br><br>
-		<<link [[Take Robin to the hospital (1:00)|Robin Hospital]]>><<unset $robin_injured>><<pass 1 hour>><<npcincr Robin love 1>><<npcincr Robin dom -1>><<npcincr Robin trauma -16>><</link>><<glove>><<ldom>>
+		<<link [[로빈을 병원에 데려간다 (1:00)|Robin Hospital]]>><<unset $robin_injured>><<pass 1 hour>><<npcincr Robin love 1>><<npcincr Robin dom -1>><<npcincr Robin trauma -16>><</link>><<glove>><<ldom>>
 		<br><br>
 
 	<<elseif $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 40>>
-		You knock on the door. Robin opens it and smiles. <<His>> eyes are red. "Hey," <<he>> says. "Come in." You enter and sit on the bed. <<He>> sits beside you.
+		당신은 문을 두드린다. 로빈은 문을 열고 미소짓는다. <<HisPost "의">> 눈이 빨갛다. "어이," <<hePost "이">> 말한다. "들어와." 당신은 들어가 침대에 앉는다. <<HePost "이">> 당신의 곁에 앉는다.
 		<br><br>
 
 	<<elseif $robinpaid is 1 and $robinPayout is 0 and $robinmoney gte 20 and $NPCName[$NPCNameList.indexOf("Robin")].love gte 80 and $NPCName[$NPCNameList.indexOf("Robin")].trauma lte 20>>
@@ -32,49 +32,49 @@
 		<br><br>
 
 	<<elseif $halloween is 1 and !$halloween_robin>><<set $halloween_robin to 1>><<set $halloween_robin_costume to "ghost">>
-		You knock on the door. Robin throws it open and hugs you. "It's almost time," <<he>> says. "Halloween! Here's my costume." <<He>> leans over <<his>> bed and grabs the blanket, before hurling it over <<his>> head. "I'm a ghost."
+		당신은 문을 두드린다. 로빈은 문을 열어젖히고 당신을 껴안는다. "시간 다 됐어." <<hePost "이">> 말한다. "할로윈! 이게 내 의상이야." <<HePost "이">> <<hisPost "의">> 침대에 기대여 담요를 움켜쥔 후, <<hisPost "의">> 머리 위로 내던진다. "난 유령이야."
 		<br><br>
 
-		<<He>> sits down. There's an open magazine beside <<him>>, advertising more impressive, but pricey, costumes. Some are circled in pen, but <<he>> moves it away to clear space before you get a good look.
+		<<HePost "이">> 앉는다. <<himPost "의">> 옆에는 펼쳐져있는 잡지가 있고, 더 인상적이지만 비싼 코스튬을 광고하고 있다. 어떤 것들은 펜으로 동그라미가 쳐져 있지만, <<hePost "은">> 당신이 자세히 보기 전에 공간을 비우기 위해 잡지를 옮긴다.
 		<br><br>
 
-		"I want to take some of the orphans trick-or-treating on the day," <<he>> continues through the sheet. "You can come too. If you like. I want to leave between <span class="gold"><<ampm 16 00>> and <<ampm 19 00>>.</span> The orphans shouldn't be out late."
+		"난 그날 고아원 애들을 데리고 트릭-오어-트릿 하러 가고 싶어." <<hePost "은">> 시트를 통과한다. "너도 올 수 있으면 와. 네가 좋다면. 난 <span class="gold"><<ampm 16 00>>시 에서 <<ampm 19 00>>.</span>시 사이에 고아원에서 나가 있을테니 늦으면 안돼."
 		<br><br>
 
 	<<elseif $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 10>>
-		You knock on the door. Robin throws it open and hugs you. "Come in," <<he>> says. You enter and sit on the bed. <<He>> sits beside you.
+		당신은 문을 두드린다. 로빈은 문을 열어젖히고 당신을 껴안는다. "들어와." <<hePost "이">> 말한다. 당신은 들어가 침대에 앉는다. <<HePost "은">> 당신의 옆에 앉는다.
 		<br><br>
 		<<if $robinthank isnot 1>>
 			<<set $robinthank to 1>>
-			You open your mouth to speak, but Robin interrupts you. "Thank you," <<he>> says. "For everything." <<He>> rests <<his>> head on your shoulder.
+			당신은 말하려고 입을 열지만, 로빈이 말을 가로막는다. "고마워." <<hePost "이">> 말한다. "전부 다." <<HePost "은">> 당신의 어깨에 <<hisPost "의">> 머리를 기댄다.
 			<br><br>
 		<<else>>
 		<</if>>
 	<<else>>
 		<<if $robinconsoleintro isnot 1>>
 			<<set $robinconsoleintro to 1>><<set $robinconsole to 1>>
-			You knock on the door, and hear a flurry of activity on the other side. Robin throws the door open and hugs you. "You came," <<he>> says. "Look." <<He>> pulls you into the room. In the corner beneath an old television is a new games console. "I've been saving up." <<He>> says, sitting on the bed. "What are you waiting for?" <<He>> pats the bed beside <<him>>.
+			당신이 문을 두드리니, 반대편에서 요란한 소리가 들린다. 로빈이 문을 열어젖히고 당신을 껴안는다. "왔구나." <<hePost "이">> 말한다. "봐." <<HePost "은">> 당신을 방으로 끌어들인다. 오래된 텔레비전 아래 구석에는 새 게임기가 있다. "저축했거든." <<HePost "이">> 그렇게 말하고선, 침대에 앉는다. "뭘 기다리고 있는 거야?" <<HePost "은">> <<himPost "의">> 침대 옆자리를 툭툭 친다.
 			<<lstress>><<stress -12>>
 			<br><br>
 		<<elseif $robinconsole is 1 and $robinpaid isnot 1 and $robindebt gte ($robindebtlimit - 1) and $robinconsolelost isnot 1>>
 			<<set $robinconsolelost to 1>><<set $robinconsole to 0>>
-			You knock on the door. Robin opens it and hugs you. "Come in," <<he>> says, pulling you inside. <<He>> sits on the bed. Something is different. There's no console.
+			당신은 문을 두드린다. 로빈이 문을 열고 당신을 껴안는다. "들어와." <<hePost "은">> 그렇게 말하며, 당신을 안쪽으로 끌어들인다. <<HePost "은">> 침대에 앉는다. 무언가 다르다. 게임기가 없다.
 			<br><br>
-			"You've noticed," <<he>> says. "I was bored of it, so I sold it." <<He>> smiles, but it doesn't touch <<his>> eyes.
+			"알아차렸구나." <<hePost "이">> 말한다. "지루해서 팔았어." <<HePost "은">> 웃고 있지만, <<hisPost "의">> 눈은 그렇지 않다.
 			<br><br>
-			"But you loved it," you say.
+			"하지만 넌 그걸 좋아했잖아." 라고 당신은 말한다.
 			<br><br>
-			"No I didn't!" <<he>> responds, irritated. "Just leave it."
+			"아니, 안그랬어!" <<hePost "이">> 짜증을 내며 대답한다. "그냥 내버려 둬."
 			<br><br>
-			"Is something wrong?" you say. "You're never like this."
+			"무슨 일 있었어?" 당신이 말한다. "넌 절대 이러지 않아."
 			<br><br>
-			"Everything's fine, honest," <<he>> says. <<He>> stares at <<his>> knees.
+			"다 괜찮을 거야, 솔직히." <<hePost "이">> 말한다. <<HePost "은">> <<hisPost "의">> 무릎을 응시한다.
 			<br><br>
 		<<elseif $robinconsole is 0>>
-			You knock on the door. Robin throws it open and hugs you. "Come in," <<he>> says, pulling you inside. <<He>> sits on the bed and stares at the spot <<his>> console used to fill.
+			당신은 문을 두드린다. 로빈은 문을 열어젖히고 당신을 껴안는다. "들어와." <<hePost "이">> 그렇게 말하며, 당신을 안쪽으로 끌어들인다. <<HePost "은">> 침대에 앉아 <<hisPost "의">> 게임기가 있던 자리를 응시한다.
 			<br><br>
 		<<else>>
-			You knock on the door. Robin throws it open and hugs you. "Come in," <<he>> says, pulling you inside. <<He>> sits on the bed beside the television and picks up the controller.
+			당신은 문을 두드린다. 로빈은 문을 열어젖히고 당신을 껴안는다. "들어와." <<hePost "이">> 그렇게 말하며, 당신을 안쪽으로 끌어들인다. <<HePost "은">> 텔레비전 옆의 침대에 앉아 컨트롤러를 집어든다.
 			<br><br>
 		<</if>>
 	<</if>>
@@ -84,154 +84,154 @@
 <<widget "robinoptions">>
 	<<if $schoolday is 1 and $hour is 8>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 80>>
-			Robin looks at the clock on the wall. "It's school soon," <<he>> says. "I don't want to go."
+			로빈은 벽에 걸린 시계를 본다. "학교 갈 시간이야." <<hePost "이">> 말한다. "가고싶지 않아."
 			<br><br>
-			You hug <<him>>. "Everything will be fine," you say.
+			당신은 <<himPost "을">> 안아준다. "다 괜찮을 거야." 당신이 말한다.
 			<br><br>
-			<<link [[Walk to school (0:40)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 40>><</link>>
+			<<link [[학교에 걸어간다 (0:40)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 40>><</link>>
 			<br>
 		<<else>>
-			Robin looks at the clock on the wall. "It's school soon," <<he>> says. "Would you like to walk with me?"
+			로빈은 벽에 걸린 시계를 본다. "학교 갈 시간이야." <<hePost "이">> 말한다. "나랑 같이 걸어가지 않을래?"
 			<br><br>
-			<<link [[Walk to school (0:20)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 20>><</link>>
+			<<link [[학교에 걸어간다 (0:20)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 20>><</link>>
 			<br>
 		<</if>>
-		<<link [[Leave|Orphanage]]>><<endevent>><</link>>
+		<<link [[떠난다|Orphanage]]>><<endevent>><</link>>
 		<br>
 	<<elseif $hour gte 21 or $hour lte 6>>
-		Robin looks at the clock on the wall. "It's past my bed time," <<he>> says. <<He>> hugs you. "Goodnight."
+		로빈은 벽에 걸린 시계를 본다. "취침 시간이 지났어." <<hePost "이">> 말한다. <<HePost "이">> 당신을 껴안는다. "잘 자."
 		<br><br>
 		<<if $robinromance is 1>>
-			<<link [[Ask to stay|Robin Room Bed]]>><</link>>
+			<<link [[머물러 달라고 부탁한다|Robin Room Bed]]>><</link>>
 			<br>
 		<</if>>
-		<<link [[Leave|Orphanage]]>><<endevent>><</link>>
+		<<link [[떠난다|Orphanage]]>><<endevent>><</link>>
 		<br>
 	<<elseif $weekday is 7 and $hour gte 9 and $hour lte 16 or $weekday is 1 and $hour gte 9 and $hour lte 15>>
 		<<if $season is "winter">>
-			"I need to get my hot chocolate stand set up," <<he>> says. "Come see me in the park if you like."
+			"핫초코 판매대를 설치해야 해." <<hePost "이">> 말한다. "나 보고 싶으면 공원으로 와."
 			<br><br>
 			<<if $tutorial is 0 and $debug is 0>>
-				<<link [[Offer to help set up (0:30)|Robin Chocolate Set Tutorial]]>><<pass 30>><<npcincr Robin love 1>><<set $tutorial to 1>><</link>><<glove>>
+				<<link [[설치하는 것을 도와준다 (0:30)|Robin Chocolate Set Tutorial]]>><<pass 30>><<npcincr Robin love 1>><<set $tutorial to 1>><</link>><<glove>>
 			<<else>>
-				<<link [[Offer to help set up (0:30)|Robin Chocolate Set]]>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>>
+				<<link [[설치하는 것을 도와준다 (0:30)|Robin Chocolate Set]]>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>>
 			<</if>>
 			<br>
-			<<link [[Leave|Orphanage]]>><<endevent>><</link>>
+			<<link [[떠난다|Orphanage]]>><<endevent>><</link>>
 			<br>
 		<<else>>
-			"I need to get my lemonade stand set up," <<he>> says. "Come see me on the beach if you like."
+			"레모네이드 판매대를 설치해야 해." <<hePost "이">> 말한다. "나 보고 싶으면 해변으로 와."
 			<br><br>
 			<<if $tutorial is 0 and $debug is 0>>
-				<<link [[Offer to help set up (0:30)|Robin's Lemonade Set Tutorial]]>><<pass 30>><<npcincr Robin love 1>><<set $tutorial to 1>><</link>><<glove>>
+				<<link [[설치하는 것을 도와준다 (0:30)|Robin's Lemonade Set Tutorial]]>><<pass 30>><<npcincr Robin love 1>><<set $tutorial to 1>><</link>><<glove>>
 			<<else>>
-				<<link [[Offer to help set up (0:30)|Robin's Lemonade Set]]>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>>
+				<<link [[설치하는 것을 도와준다 (0:30)|Robin's Lemonade Set]]>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>>
 			<</if>>
 			<br>
-			<<link [[Leave|Orphanage]]>><<endevent>><</link>>
+			<<link [[떠난다|Orphanage]]>><<endevent>><</link>>
 			<br>
 		<</if>>
 	<<elseif $robinbaileyhelp is 1>><<set $robinbaileyhelp to 2>>
-		Robin turns to face you, <<his>> eyes downcast. "I'm sorry," <<he>> says. "I'm sorry I told Bailey. I thought <<endevent>><<npc Bailey>><<person1>><<he>> would help. <<Hes>><<endevent>><<npc Robin>><<person1>> meant to."
+		로빈은 <<hisPost "의">> 눈을 아래로 내리고 당신은 마주본다. "미안해." <<hePost "이">> 말한다. "베일리에게 말해서 미안해. 내 생각에 <<endevent>><<npc Bailey>><<person1>><<hePost "이">> 도와줄 거야. <<HesPost "이">><<endevent>><<npc Robin>><<person1>> 그러라고 했거든."
 		<br><br>
-		<<link [[Forgive|Robin Bailey Forgive]]>><<trauma -6>><<stress 6>><<npcincr Robin love 1>><</link>><<gstress>><<glove>><<ltrauma>>
+		<<link [[용서한다|Robin Bailey Forgive]]>><<trauma -6>><<stress 6>><<npcincr Robin love 1>><</link>><<gstress>><<glove>><<ltrauma>>
 		<br>
-		<<link [[Change the subject|Robin Bailey Subject]]>><</link>>
+		<<link [[화제를 바꾼다|Robin Bailey Subject]]>><</link>>
 		<br>
 	<<elseif $halloween is 1 and $hour gte 16 and $hour lt 19 and $monthday is 31>>
-	Robin looks at the clock on the wall. "It's time," <<he>> says, jumping to <<his>> feet. "The orphans will be ready to trick-or-treat soon. I need to get dressed."
+	로빈은 벽에 걸린 시계를 본다. 시간이 됐어" <<hePost "이">> 그렇게 말하고선 <<hisPost "의">> 발로 뛰어내린다. "고아들은 곧 트릭-오어-트릿 할 준비가 될 거야. 난 옷을 갈아 입어야겠어."
 	<br><br>
 		<<if $robinromance is 1>>
-		<<He>> hugs and pushes you towards the door. "I don't want you to see me dress," <<he>> says. "It will be more magical that way."
+		<<HePost "은">> 당신을 껴안고 문쪽으로 밀어낸다. "내가 옷 입는거 안 봤으면 좋겠어." <<hePost "이">> 말한다. "그렇게 해야 더 마법같을 테니깐."
 		<br><br>
 		<</if>>
 		<<if $worn.upper.type.includes("costume") or $worn.lower.type.includes("costume") or $worn.upper.type.includes("naked") and $worn.under_upper.type.includes("costume") or $worn.lower.type.includes("naked") and $worn.under_lower.type.includes("costume") or $physicalTransform is 1 or $specialTransform is 1>>
-		"I'll be in the main hall gathering the orphans once I'm ready."
+		"준비가 다 되면 난 고아들을 모으러 메인 홀에 있을거야."
 		<<else>>
-		"I'll be in the main hall gathering the orphans if you want to join in. I can't wait to see your costume!"
+		"나는 고아들을 모으러 메인 홀에 있을테니, 참여하고 싶으면 와. 난 네 코스튬을 정말로 보고싶어!"
 		<</if>>
 	<br><br>
-	<<link [[Leave (0:01)|Bedroom]]>><<endevent>><<pass 1>><</link>>
+	<<link [[떠난다 (0:01)|Bedroom]]>><<endevent>><<pass 1>><</link>>
 	<br>
 
 	<<else>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80>>
 			<<if $NPCName[$NPCNameList.indexOf("Robin")].love gte 5 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is undefined>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 0>>
-				"Thanks for spending time with me," <<he>> says. "It's less fun alone."
+				"시간을 내줘서 고마워." <<hePost "이">> 말한다. "혼자 있으면 재미가 없거든."
 				<br><br>
 			<<elseif $NPCName[$NPCNameList.indexOf("Robin")].love gte 10 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is 0>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 1>>
-				"I'll have to teach you how to make lemonade sometime," <<he>> says.
+				"언젠간 네게 레모네이드 만드는 법을 알려줄게." <<hePost "이">> 말한다.
 				<br><br>
 			<<elseif $NPCName[$NPCNameList.indexOf("Robin")].love gte 20 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is 1>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 2>>
 					<<if $robinconsole is 1>>
-					"Let me know if there's a game you'd like to play," <<he>> says. "You always let me choose."
+					"하고 싶은 게임이 있으면 알려줘." <<hePost "이">> 말한다. "넌 항상 내가 선택하게 해줬잖아."
 					<<else>>
-					"I like spending time with you." <<he>> says. "I'd choose your company over my console every day."
+					"난 너랑 함께 시간을 보내는게 좋아." <<hePost "이">> 말한다. "난 매일 게임하는 것보다 너랑 함께 있는게 좋아."
 					<</if>>
 				<br><br>
 			<<elseif $NPCName[$NPCNameList.indexOf("Robin")].love gte 40 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is 2>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 3>>
-				"It's good Bailey doesn't mind us meeting like this," <<he>> says.
+				"베일리가 우리가 만나는 것을 신경쓰지 않아서 좋아." <<hePost "이">> 말한다.
 				<br><br>
 			<<elseif $NPCName[$NPCNameList.indexOf("Robin")].love gte 60 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is 3>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 4>>
-				"I'm so lucky to have you as a friend," <<he>> says out of nowhere.
+				"널 친구로 둔 건 정말 행운이야." <<hePost "은">> 난데없이 말한다.
 				<br><br>
 			<<elseif $NPCName[$NPCNameList.indexOf("Robin")].love gte 100 and $NPCName[$NPCNameList.indexOf("Robin")].lovestage is 4>>
 				<<set $NPCName[$NPCNameList.indexOf("Robin")].lovestage to 5>>
-				<<He>> hugs you. "You're the best," <<he>> says.
+				<<HePost "은">> 당신을 껴안는다. "네가 최고야." <<hePost "이">> 말한다.
 				<br><br>
 			<</if>>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 10>>
-			<<link [[Talk (0:30)|Robin Trauma Talk]]>><<set $robinroomentered to 1>><<pass 30>><<stress 3>><<npcincr Robin trauma -1>><<npcincr Robin love 1>><<npcincr Robin dom -1>><</link>><<glove>><<ldom>><<gstress>>
+			<<link [[대화한다 (0:30)|Robin Trauma Talk]]>><<set $robinroomentered to 1>><<pass 30>><<stress 3>><<npcincr Robin trauma -1>><<npcincr Robin love 1>><<npcincr Robin dom -1>><</link>><<glove>><<ldom>><<gstress>>
 			<br>
 		<</if>>
 		<<if $robinnote is 1 and $robinromance isnot 1>>
-			<<link [[Kiss|Robin Romance]]>><<set $robinroomentered to 1>><<set $robinromance to 1>><</link>>
+			<<link [[키스한다|Robin Romance]]>><<set $robinroomentered to 1>><<set $robinromance to 1>><</link>>
 			<br>
 		<</if>>
 
 		<<if $schoolday is 1 and ($hour is 8 or $hour is 7)>>
 			<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma gte 80>>
-				<<link [[Walk to school (0:40)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 40>><</link>>
+				<<link [[학교에 걸어간다 (0:40)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 40>><</link>>
 				<br>
 			<<else>>
-				<<link [[Walk to school (0:20)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 20>><</link>>
+				<<link [[학교에 걸어간다 (0:20)|Robin Walk School]]>><<set $robinschoolmorning to 1>><<pass 20>><</link>>
 				<br>
 			<</if>>
 		<</if>>
 
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $robinwalk isnot 1>>
-			<<link [[Go somewhere together|Robin Walk]]>><<set $robinroomentered to 1>><<set $robinhugging to 0>><</link>>
+			<<link [[같이 놀러간다|Robin Walk]]>><<set $robinroomentered to 1>><<set $robinhugging to 0>><</link>>
 			<br>
 		<</if>>
 		<<if $robinconsole is 1>>
-			<<link [[Watch Robin play (0:30)|Robin Watch]]>><<set $robinroomentered to 1>><<stress -3>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+			<<link [[로빈의 플레이를 본다 (0:30)|Robin Watch]]>><<set $robinroomentered to 1>><<stress -3>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 			<br>
-			<<link [[Play with Robin (0:30)|Robin Play]]>><<set $robinroomentered to 1>><<set $robinhugging to 0>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>>
+			<<link [[로빈과 같이 플레이한다 (0:30)|Robin Play]]>><<set $robinroomentered to 1>><<set $robinhugging to 0>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>>
 			<br>
 		<<elseif $money gte 40000 and $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $robindebtknown is 1>>
-			<<link [[Buy Robin a new console (£400 0:30)|Robin Console]]>><<set $robinhugging to 0>><<pass 30>><<npcincr Robin love 10>><<npcincr Robin dom -1>><<set $robinconsole to 1>><<set $money -= 40000>><</link>><<glove>><<ldom>>
+			<<link [[로빈에게 새 게임기 사주기 (£400 0:30)|Robin Console]]>><<set $robinhugging to 0>><<pass 30>><<npcincr Robin love 10>><<npcincr Robin dom -1>><<set $robinconsole to 1>><<set $money -= 40000>><</link>><<glove>><<ldom>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $trauma gte 1000 and $robinhugging isnot 1>>
-			<<link [[Hug (0:05)|Robin Hug]]>><<pass 5>><<trauma -1>><<stress -1>><<npcincr Robin love 1>><</link>><<ltrauma>><<lstress>><<glove>>
+			<<link [[껴안는다 (0:05)|Robin Hug]]>><<pass 5>><<trauma -1>><<stress -1>><<npcincr Robin love 1>><</link>><<ltrauma>><<lstress>><<glove>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 20 and $cat gte 6>>
-			<<link [[Request headpats (0:20)|Robin Cat]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<cat>><<gdom>><<glove>><<ltrauma>><<lstress>>
+			<<link [[머리를 쓰다듬어 달라고 요청한다 (0:20)|Robin Cat]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<cat>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $livestock_robin gte 1 and $cow gte 6>>
-			<<link [[Moo for attention (0:20)|Robin Cow]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<cow>><<gdom>><<glove>><<ltrauma>><<lstress>>
+			<<link [[음메 소리를 내 주의를 끈다 (0:20)|Robin Cow]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<cow>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 80 and $harpy gte 6>>
-			<<link [[Sing with Robin (0:20)|Robin Harpy]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>>
+			<<link [[로빈을 위해 노래한다 (0:20)|Robin Harpy]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>>
 			<<if $halloween is 1>>
 				<<npcincr Robin dom -2>>
 			<<else>>
@@ -247,70 +247,70 @@
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].trauma lt 20 and $wolfgirl gte 6>>
-			<<link [[Present belly (0:20)|Robin Wolf]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<wolfgirl>><<gdom>><<glove>><<ltrauma>><<lstress>>
+			<<link [[배를 보여준다 (0:20)|Robin Wolf]]>><<pass 20>><<trauma -2>><<stress -2>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<wolfgirl>><<gdom>><<glove>><<ltrauma>><<lstress>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].lovestage gte 1 and $milkshake gte 2>>
-			<<link [[Offer milkshake (0:20)|Robin Give Milkshake]]>> <<set $milkshake -= 2>><<stress -5>> <</link>><<lstress>><<glove>>
+			<<link [[밀크 쉐이크를 준다 (0:20)|Robin Give Milkshake]]>> <<set $milkshake -= 2>><<stress -5>> <</link>><<lstress>><<glove>>
 			<br>
 		<</if>>
 		<<if $NPCName[$NPCNameList.indexOf("Robin")].lovestage gte 2 and $milkshake gte 1>>
-			<<link [[Share milkshake (0:20)|Robin Share Milkshake]]>> <<set $milkshake -= 1>><<stress -10>> <</link>><<lstress>><<gglove>>
+			<<link [[밀크 쉐이크를 공유한다 (0:20)|Robin Share Milkshake]]>> <<set $milkshake -= 1>><<stress -10>> <</link>><<lstress>><<gglove>>
 			<br>
 		<</if>>
 		<br>
 		<<robinbully>>
-		<<link [[Leave|Orphanage]]>><<set $robinhugging to 0>><<endevent>><</link>>
+		<<link [[떠난다|Orphanage]]>><<set $robinhugging to 0>><<endevent>><</link>>
 		<br>
 	<</if>>
 <</widget>>
 
 <<widget "robinpay">>
-	<i>Robin is safe for now, but Bailey will keep collecting the toll. Maybe you should confront Bailey about it.</i>
+	<i>로빈은 지금은 안전하지만 베일리는 계속해서 상납금를 징수할 것이다. 어쩌면 당신은 그것에 대해 베일리와 맞서야 할 지도 모른다.</i>
 	<br><br>
 <</widget>>
 
 <<widget "robinhug">>
 	<<if $robinhugcry isnot 1 and $robinpaid isnot 1 and $trauma gte ($traumamax / 7) * 2>>
-		<<link [[Cry (0:05)|Robin Hug Cry]]>><<pass 5>><<set $robinhugcry to 1>><<stress -12>><<trauma -6>><<tearup>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<lstress>><<ltrauma>><<glove>><<gdom>>
+		<<link [[운다 (0:05)|Robin Hug Cry]]>><<pass 5>><<set $robinhugcry to 1>><<stress -12>><<trauma -6>><<tearup>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<lstress>><<ltrauma>><<glove>><<gdom>>
 		<br>
 	<</if>>
 	<<if $robinhugcry isnot 1 and $trauma gte ($traumamax / 7) * 3>>
-		<<link [[Break down (0:30)|Robin Hug Break]]>><<set $robinhugcry to 1>><<stress -12>><<stress -12>><<trauma -6>><<trauma -6>><<pass 30>><<tearup>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<llstress>><<lltrauma>><<glove>><<gdom>>
+		<<link [[쓰러진다 (0:30)|Robin Hug Break]]>><<set $robinhugcry to 1>><<stress -12>><<stress -12>><<trauma -6>><<trauma -6>><<pass 30>><<tearup>><<npcincr Robin love 1>><<npcincr Robin dom 1>><</link>><<llstress>><<lltrauma>><<glove>><<gdom>>
 		<br>
 	<</if>>
 	<<if $robinhugcomplain isnot 1>>
-		<<link [[Complain (0:10)|Robin Hug Complain]]>><<set $robinhugcomplain to 1>><<stress -12>><<trauma -6>><<pass 10>><</link>><<ltrauma>><<lstress>>
+		<<link [[불평한다 (0:10)|Robin Hug Complain]]>><<set $robinhugcomplain to 1>><<stress -12>><<trauma -6>><<pass 10>><</link>><<ltrauma>><<lstress>>
 		<br>
 	<</if>>
 	<<if $NPCName[$NPCNameList.indexOf("Robin")].love gte 50>>
-		<<link [[Cuddle (0:10)|Robin Hug Cuddle]]>><<set $robinhugging to 1>><<pass 10>><<npcincr Robin love 1>><<trauma -1>><<stress -1>><</link>><<ltrauma>><<lstress>><<glove>>
+		<<link [[바짝 달라붙는다 (0:10)|Robin Hug Cuddle]]>><<set $robinhugging to 1>><<pass 10>><<npcincr Robin love 1>><<trauma -1>><<stress -1>><</link>><<ltrauma>><<lstress>><<glove>>
 		<br>
 	<</if>>
 	<<if $robinstunned isnot 1 and $robinconsole is 1>>
-		<<link [[Watch Robin play (0:30)|Robin Watch]]>><<set $robinhugging to 1>><<stress -6>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
+		<<link [[로빈의 플레이를 본다 (0:30)|Robin Watch]]>><<set $robinhugging to 1>><<stress -6>><<trauma -3>><<pass 30>><<npcincr Robin love 1>><</link>><<glove>><<ltrauma>><<lstress>>
 		<br>
 	<</if>>
-	<<link [[Stop hugging|Robin Hug Stop]]>><</link>>
+	<<link [[그만 껴안는다|Robin Hug Stop]]>><</link>>
 	<br>
 	<<set $robinstunned to 0>>
 <</widget>>
 
 <<widget "robinbully">>
 	<<if $trauma gte ($traumamax / 7) * 2 and $robinhugcomplain isnot 1>>
-		<<link [[Complain (0:10)|Robin Complain]]>><<set $robinroomentered to 1>><<pass 10>><<set $robinhugcomplain to 1>><<set $phase to 0>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
+		<<link [[불평한다 (0:10)|Robin Complain]]>><<set $robinroomentered to 1>><<pass 10>><<set $robinhugcomplain to 1>><<set $phase to 0>><<trauma -6>><<stress -6>><</link>><<ltrauma>><<lstress>>
 		<br>
 	<</if>>
 	<<if $robinblame isnot 1 and $trauma gte ($traumamax / 7) * 2>>
-		<<link [[Blame Robin|Robin Blame]]>><<set $robinroomentered to 1>><<set $phase to 1>><<set $robinblame to 1>><<trauma -6>><<stress -6>><<npcincr Robin love -1>><<npcincr Robin dom -1>><</link>><<ltrauma>><<lstress>><<llove>><<ldom>>
+		<<link [[로빈을 비난한다|Robin Blame]]>><<set $robinroomentered to 1>><<set $phase to 1>><<set $robinblame to 1>><<trauma -6>><<stress -6>><<npcincr Robin love -1>><<npcincr Robin dom -1>><</link>><<ltrauma>><<lstress>><<llove>><<ldom>>
 		<br>
 	<</if>>
 	<<if $robinpersecute isnot 1 and $trauma gte ($traumamax / 7) * 3>>
-		<<link [[Persecute Robin|Robin Persecute]]>><<set $robinroomentered to 1>><<set $phase to 3>><<set $robinpersecute to 1>><<trauma -12>><<stress -12>><<npcincr Robin love -1>><<npcincr Robin dom -1>><</link>><<lltrauma>><<llstress>><<llove>><<ldom>>
+		<<link [[로빈을 못살게 군다|Robin Persecute]]>><<set $robinroomentered to 1>><<set $phase to 3>><<set $robinpersecute to 1>><<trauma -12>><<stress -12>><<npcincr Robin love -1>><<npcincr Robin dom -1>><</link>><<lltrauma>><<llstress>><<llove>><<ldom>>
 		<br>
 	<</if>>
 	<<if $robinmoney gt 0>>
-		<<link [[Ask for money|Robin Money]]>><<set $robinroomentered to 1>><</link>>
+		<<link [[돈을 요구한다|Robin Money]]>><<set $robinroomentered to 1>><</link>>
 		<br>
 	<</if>>
 	<br>
@@ -340,29 +340,29 @@
 
 <<widget "robinPayout">>
 <<set $robinPayout to 1>>
-You knock on the door. Robin throws it open and hugs you. "Come in," <<he>> says, pulling you inside. <<He>> fumbles around in <<his>> drawer for a moment, before handing you <span class="gold">£<<print $robinmoney>></span>.
+당신은 문을 두드린다. 로빈은 문을 열어젖히고 당신을 껴안는다. "들어와." <<hePost "이">> 당신은 안쪽으로 끌어당기며 말한다. <<HePost "은">> <<hisPost "의">> 서랍을 잠시 더듬더니, 당신의 손에 <span class="gold">£<<print $robinmoney>></span>를 쥐어줍니다.
 <br><br>
 <<set $money += ($robinmoney * 100)>><<set $robinmoney to 0>>
 <<if $robinPayoutIntro is undefined>>
 	<<set $robinPayoutIntro to 0>>
-	You look down at the money, confused. <<He>> gently places it into your hands, and looks you in the eyes. "You're paying for me. I'd be a lousy <<if $robinromance is 1>><<nnpc_girlfriend "Robin">><<else>>friend<</if>> if I didn't at least try to help."
+	당신은 혼란스러워하며, 돈을 내려다본다. <<HePost "은">> 당신의 손에 부드럽게 그것을 올려놓고, 당신의 눈을 바라본다. "네가 나 대신 돈을 내잖아. 난 못된 <<if $robinromance is 1>><<nnpc_girlfriendPost "Robin">><<else>>friend<</if>>니깐 내가 최소한이라도 도와주고 싶어."
 <<else>>
 	"<<print either(
-	"I hope this helps, at least a little.",
-	"Bailey keeps reminding me that I'm dead weight now. I'm a little worried, but not scared. Not anymore.",
-	"I wish I could make more, so I could help you more.",
-	"How do you make so much? I want to be more useful to you.",
-	"Maybe one day, I'll be paying for you instead!",
-	"I don't have much to spend it on, I have everything I need right here.<<set _hand to 1>>",
-	"Thank you, so much. I'm really lucky to have you.",
-	"I always keep £20 in case of an emergency. I hope that's alright.",
-	"Do you ever think about running away? I used to think about it a lot.",
-	"Some day, we won't have to pay anymore. Bad people always get what's coming to them, right?",
-	"That's all I have, is it enough? I can work harder next week!",
-	"You're worth every penny, and more."
+	"이게 조금이라도 도움이 되었으면 좋겠어.",
+	"베일리가 자꾸 나에게 무거운 책임이 있다는 것을 상기시켜줘. 조금은 걱정되지만, 무섭지는 않아. 더 이상은.",
+	"내가 더 벌 수 있다면, 너를 더 많이 도와줄 수 있겠지.",
+	"너는 어떻게 그렇게 많이 버는거야? 나도 너에게 더 도움이 되었으면 좋겠어.",
+	"언젠가는, 내가 너 대신 돈을 낼 거야!",
+	"별로 쓸 데도 없고, 내게 필요한 건 다 여기 있어.<<set _hand to 1>>",
+	"고마워, 정말로. 널 만난건 정말 행운이야.",
+	"난 항상 비상시를 대비해서 £20 를 들고다녀. 그게 괜찮았으면 좋겠어.",
+	"도망칠 생각 해본 적 있어? 난 그것에 대해서 많이 생각하곤 해.",
+	"언젠가, 우리는 돈을 내지 않아도 될거야. 나쁜 사람은 언제나 그들이 하는 대로 돌려받는 법이지, 그렇지?",
+	"그게 내가 가진 전부인데, 충분해? 다음 주에는 더 열심히 일할 수 있을 것 같아!",
+	"넌 모든 페니, 그리고 그 이상의 가치가 있어."
 	)>>"
-	<<if _hand is 1>><<He>> squeezes your hand.<</if>><<npcincr Robin dom 3>><<gdom>>
+	<<if _hand is 1>><<HePost "은">> 당신의 손을 꼭 쥔다.<</if>><<npcincr Robin dom 3>><<gdom>>
 <</if>>
 <br><br>
-<<He>> sits on the bed beside the television and picks up the controller.
+<<HePost "은">> 텔레비전 옆에 있는 침대에 앉아 컨트롤러를 잡는다.
 <</widget>>
